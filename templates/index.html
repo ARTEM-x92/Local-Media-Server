@@ -42,24 +42,6 @@
   <div class="page-wrapper">
     <div class="content-container">
 
-      <!-- Quick Stats -->
-      <div class="quick-stats">
-        <div class="stat-box">
-          <div class="stat-icon">📊</div>
-          <div class="stat-info">
-            <div class="stat-value">{{ total_items }}</div>
-            <div class="stat-label">Items</div>
-          </div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-icon">💾</div>
-          <div class="stat-info">
-            <div class="stat-value">{{ total_size_human }}</div>
-            <div class="stat-label">Total Size</div>
-          </div>
-        </div>
-      </div>
-
       <!-- Filters & Upload Grid -->
       <div class="controls-wrapper">
         
@@ -162,6 +144,24 @@
           {% endif %}
         {% endfor %}
       </nav>
+
+      <!-- Quick Stats -->
+      <div class="quick-stats">
+        <div class="stat-box">
+          <div class="stat-icon">📊</div>
+          <div class="stat-info">
+            <div class="stat-value">{{ total_items }}</div>
+            <div class="stat-label">Items</div>
+          </div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-icon">💾</div>
+          <div class="stat-info">
+            <div class="stat-value">{{ total_size_human }}</div>
+            <div class="stat-label">Total Size</div>
+          </div>
+        </div>
+      </div>
       
       <!-- MEDIA LIBRARY -->
       {% if folders or files %}
