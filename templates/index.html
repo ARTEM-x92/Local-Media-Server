@@ -41,9 +41,10 @@
   <!-- ========== MAIN CONTENT ========== -->
   <div class="page-wrapper">
     <div class="content-container">
-
+      
+      <button id="HS-Btn" onclick="HS_AO()">Advanced Options ⬇️</button>
       <!-- Filters & Upload Grid -->
-      <div class="controls-wrapper">
+      <div class="controls-wrapper" id="Advanced_Options">
         
         <!-- FILTERS CARD -->
         <div class="control-card">
@@ -236,5 +237,18 @@
 
   <script src="{{ url_for('static', filename='js/theme.js') }}"></script>
   <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+  <script>
+    function HS_AO() {
+      var HS_Btn = document.getElementById("HS-Btn");
+      var Content = document.getElementById("Advanced_Options");
+      if (Content.style.display === "grid") {
+        Content.style.display = "none";
+        HS_Btn.textContent = "Advanced Options ⬇️"
+      } else {
+        Content.style.display = "grid";
+        HS_Btn.textContent = "Advanced Options ⬆️"
+      }
+    }
+  </script>
 </body>
 </html>
