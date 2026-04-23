@@ -42,19 +42,6 @@
   <div class="page-wrapper">
     <div class="content-container">
 
-      <!-- Breadcrumb -->
-      <nav class="breadcrumb-nav">
-        <a href="{{ url_for('index') }}" class="crumb">🏠 Home</a>
-        {% for crumb in breadcrumbs %}
-          <span class="crumb-divider">›</span>
-          {% if loop.last %}
-            <span class="crumb crumb-active">{{ crumb.name }}</span>
-          {% else %}
-            <a href="{{ url_for('index', p=crumb.path) }}" class="crumb">{{ crumb.name }}</a>
-          {% endif %}
-        {% endfor %}
-      </nav>
-
       <!-- Quick Stats -->
       <div class="quick-stats">
         <div class="stat-box">
@@ -163,6 +150,19 @@
       </div>
       {% endif %}
 
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb-nav">
+        <a href="{{ url_for('index') }}" class="crumb">🏠 Home</a>
+        {% for crumb in breadcrumbs %}
+          <span class="crumb-divider">›</span>
+          {% if loop.last %}
+            <span class="crumb crumb-active">{{ crumb.name }}</span>
+          {% else %}
+            <a href="{{ url_for('index', p=crumb.path) }}" class="crumb">{{ crumb.name }}</a>
+          {% endif %}
+        {% endfor %}
+      </nav>
+      
       <!-- MEDIA LIBRARY -->
       {% if folders or files %}
         <div class="library-grid">
