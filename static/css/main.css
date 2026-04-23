@@ -360,6 +360,14 @@ input, select {
   }
 }
 
+#HS-Btn {
+  background: var(--gradient-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  color: var(--color-text);
+  margin-bottom: var(--space-sm);
+}
+
 .control-card {
   background: var(--gradient-card);
   border: 1px solid var(--color-border);
